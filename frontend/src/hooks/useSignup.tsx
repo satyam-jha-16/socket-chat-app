@@ -40,6 +40,7 @@ const useSignup = () => {
                 title: error.message,
             });
             console.log(error);
+            return;
         } finally {
             setLoading(false);
         }

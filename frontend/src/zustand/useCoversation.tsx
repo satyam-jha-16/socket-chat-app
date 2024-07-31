@@ -2,13 +2,14 @@ import { create } from 'zustand'
 
 type ConversationType = {
     id : string;
-    name : string;
+    fullName : string;
     profilePic : string;
 }
 type MessageType = {
-    id : string;
-    body : string;
-    senderId : string;
+    id: string;
+	body: string;
+	senderId: string;
+	createdAt: string;
 }
 interface ConversationsState {
     selectedConversation : ConversationType | null;

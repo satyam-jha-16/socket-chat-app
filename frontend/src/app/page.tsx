@@ -1,5 +1,7 @@
 'use client'
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
+import EmptyMessage from "@/components/messages/EmptyMessage";
+import MessageContainer from "@/components/messages/MessageContiner";
 import Conversations from "@/components/sidebar/Conversations";
 import LogoutButton from "@/components/sidebar/LogoutButton";
 import SearchUser from "@/components/sidebar/SearchUser";
@@ -25,7 +27,7 @@ export default function Home() {
                   </div>
                   <div className="mt-7 w-2/3 bg-white p-6 border-solid shadow-lg border-black">
                     {/* <MainContent /> */}
-                    <h1>main content</h1>
+                    <MessageContainer />
                   </div>
                 </div>
               </MaxWidthWrapper>

@@ -5,6 +5,7 @@ import './globals.css'
 
 import { Toaster } from '@/components/ui/toaster'
 import { AuthContextProvider } from '@/context/AuthContext'
+import SocketContextProvider from '@/context/SocketContext'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -22,7 +23,9 @@ export default function RootLayout({
         )}>
         <Toaster />
         <AuthContextProvider>
-          {children}
+          <SocketContextProvider>
+            {children}
+          </SocketContextProvider>
         </AuthContextProvider>
       </body>
     </html>

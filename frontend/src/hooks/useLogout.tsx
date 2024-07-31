@@ -27,6 +27,7 @@ const useLogout = () => {
 			toast({
                 title: "Failed to logout",
             });
+			return ;
 		} finally {
 			setLoading(false);
 		}
