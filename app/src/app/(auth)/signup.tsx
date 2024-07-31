@@ -22,7 +22,7 @@ const SignUp = () => {
 
   const handleSignUp = async () => {
     Keyboard.dismiss();
-    console.log(fullName, username, password, confirmPassword, gender);
+    //console.log(fullName, username, password, confirmPassword, gender);
     
 
     if (!fullName || !username || !password || !confirmPassword || !gender) {

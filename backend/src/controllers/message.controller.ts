@@ -1,5 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 import prisma from "../db/prisma.js";
+import { getRecieverSocketId, io } from "../socket/socket.js";
 
 export const sendMessage = async (req: Request, res: Response)=> {
   try {
@@ -50,9 +51,17 @@ export const sendMessage = async (req: Request, res: Response)=> {
         }
       });
     }
-    return res.status(200).json(newMessage);
+ 
     // TODO : ADD SOCKETIO HERE FOR REALTIME MESSAGING
 
+    const recieverSocketId = getRecieverSocketId(recieverId);
+    if(recieverSocketId){
+      io.to(recieverSocketId).emit("newMessage", newMessage);
+    }
+
+
+
+    return res.status(200).json(newMessage);
   } catch (err) {
     console.log("error sendMessage Cotroller ", err);
     return res.status(500).json({ error: "Internal Server Error" });

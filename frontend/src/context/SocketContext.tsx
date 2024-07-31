@@ -15,7 +15,7 @@ export const useSocketContext = (): ISocketContext => {
     }
     return context;
 };
-const socketURL = process.env.NEXT_PUBLIC_API_ENDPOINT as string;
+const socketURL = "http://localhost:5000" as string;
 const SocketContextProvider = ({ children }: { children: ReactNode }) => {
     const socketRef = useRef<Socket | null>(null);
 
