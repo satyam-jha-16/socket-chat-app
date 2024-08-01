@@ -5,7 +5,10 @@ import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import { app, server } from "./socket/socket.js";
+import path from "path";
 dotenv.config();
+const PORT = process.env.PORT || 5000;
+const __dirname = path.resolve();
 
 const corsOptions = {
   origin: ["http://localhost:3000", "http://localhost:5173", "*"], // Replace with your front-end domain
@@ -29,6 +32,6 @@ app.use("/api/messages", messageRoutes);
 app.get("/", (req, res) => {
   res.send("hello world!!!");
 });
-server.listen("5000", () => {
+server.listen(PORT, () => {
   console.log("app is running on server 5000");
 });
