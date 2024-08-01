@@ -10,6 +10,7 @@ type MessageType = {
 	body: string;
 	senderId: string;
 	createdAt: string;
+    shouldShake? : boolean;
 }
 interface ConversationsState {
     selectedConversation : ConversationType | null;

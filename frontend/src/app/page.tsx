@@ -12,12 +12,17 @@ import { useRouter } from "next/navigation";
 
 export default function Home() {
   const { authUser, setAuthUser, isLoading } = useAuthContext();
+
   // console.log("auth user ", authUser);
   const router = useRouter();
+
+  if(!authUser && !isLoading){
+    router.push('/auth/login');
+  }
   return (
     <div>
       {
-        isLoading ? <div>Loading...</div> :
+        isLoading ? <div className = 'grid place-center justify-center items-center pt-10'><div className="w-6 h-6 border-2 border-black border-t-transparent rounded-full animate-spin"></div></div> :
           authUser ? (
             <main className="border">
               <MaxWidthWrapper >
@@ -34,7 +39,12 @@ export default function Home() {
             </main>
 
           ) : (
-            <h1>You are not logged in</h1>
+            <div className = 'flex flex-col justify-center items-center pt-10'>
+              <div className="w-6 h-6 border-2 p-5 border-black border-t-transparent rounded-full animate-spin"></div>
+            <p className = "text-2xl pt-10">
+              Hold'up while we redirect you to the Login Page </p>
+            </div>
+            
           )
       }
     </div>
