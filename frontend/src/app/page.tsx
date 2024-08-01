@@ -42,7 +42,7 @@ export default function Home() {
             <div className = 'flex flex-col justify-center items-center pt-10'>
               <div className="w-6 h-6 border-2 p-5 border-black border-t-transparent rounded-full animate-spin"></div>
             <p className = "text-2xl pt-10">
-              Hold'up while we redirect you to the Login Page </p>
+              Hold up while we redirect you to the Login Page </p>
             </div>
             
           )

@@ -97,7 +97,7 @@ const Page = () => {
                     </button>
                     <div className="text-center mt-4">
                         <span className="text-sm font-normal text-neutral-500">
-                            Don't have an account?{" "}
+                            Don&apos;t have an account?{" "}
                         </span>
                         <Link href={'/auth/signup'} className="text-neutral-800 font-medium">
                             Sign Up
