@@ -1,5 +1,5 @@
 import { useAuthContext } from "@/context/AuthContext";
-import { format } from "date-fns"; // Optional: Use date-fns for formatting
+import {format} from "date-fns"; // Optional: Use date-fns for formatting
 
 type Msg = {
   id: string;
