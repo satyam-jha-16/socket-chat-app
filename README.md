@@ -164,5 +164,5 @@ This project is [MIT](https://opensource.org/licenses/MIT) licensed.
 
 ---
 
-Made with ❤️ by [Your Name](https://github.com/yourusername)
+Made with ❤️ by [Satyam Jha](https://github.com/satyam-jha-16)
 ```
